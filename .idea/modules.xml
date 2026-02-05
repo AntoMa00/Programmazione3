@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BriPoBe-Shop/BriPoBe-Shop.iml" filepath="$PROJECT_DIR$/BriPoBe-Shop/BriPoBe-Shop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Programmazione3.iml" filepath="$PROJECT_DIR$/.idea/Programmazione3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop.iml" filepath="$PROJECT_DIR$/shop.iml" />
     </modules>
   </component>
 </project>
