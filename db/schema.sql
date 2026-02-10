@@ -1,66 +1,63 @@
-CREATE TABLE Utente (
-    username      VARCHAR(64) PRIMARY KEY,
-    password      VARCHAR(256) NOT NULL,
-    nome          VARCHAR(16) NOT NULL,
-    cognome       VARCHAR(16) NOT NULL,
-    dataNascita  DATE NOT NULL,
-    sesso         CHAR(1),
-    nTel         CHAR(10),
-    email         VARCHAR(80)
+CREATE TABLE UTENTE (
+    USERNAME      VARCHAR(64) PRIMARY KEY,
+    PASSWORD      VARCHAR(256) NOT NULL,
+    NOME          VARCHAR(16) NOT NULL,
+    COGNOME       VARCHAR(16) NOT NULL,
+    DATANASCITA   DATE NOT NULL,
+    SESSO         CHAR(1),
+    NTEL          CHAR(10),
+    EMAIL         VARCHAR(80)
 );
 
-CREATE TABLE Amministratore (
-    username      VARCHAR(64) PRIMARY KEY,
-    password      VARCHAR(256) NOT NULL,
-    nome          VARCHAR(16) NOT NULL,
-    cognome       VARCHAR(16) NOT NULL,
-    dataNascita  DATE NOT NULL,
-    sesso         CHAR(1),
-    nTel         CHAR(10),
-    email         VARCHAR(80)
+CREATE TABLE AMMINISTRATORE (
+    USERNAME      VARCHAR(64) PRIMARY KEY,
+    PASSWORD      VARCHAR(256) NOT NULL,
+    NOME          VARCHAR(16) NOT NULL,
+    COGNOME       VARCHAR(16) NOT NULL,
+    DATANASCITA   DATE NOT NULL,
+    SESSO         CHAR(1),
+    NTEL          CHAR(10),
+    EMAIL         VARCHAR(80)
 );
 
+CREATE TABLE PRODOTTOACQUISTABILE (
+    CODICE        CHAR(4) PRIMARY KEY,
+    NOME          VARCHAR(16) NOT NULL,
+    DESCRIZIONE   VARCHAR(256),
+    QUANTITA      INT NOT NULL,
+    COSTO         DECIMAL(6,2) NOT NULL,
+    CATEGORIA     VARCHAR(32),
+    USERNAME      VARCHAR(64) NOT NULL,
 
-CREATE TABLE ProdottoAcquistabile (
-    codice        CHAR(4) PRIMARY KEY,
-    nome          VARCHAR(16) NOT NULL,
-    descrizione   VARCHAR(256),
-    quantita      INT NOT NULL,
-    costo         DECIMAL(6,2) NOT NULL,
-    categoria     VARCHAR(32),
-    username      VARCHAR(64) NOT NULL,
-
-    CONSTRAINT fk_pa_utente
-        FOREIGN KEY (username)
-            REFERENCES Utente(username)
+    CONSTRAINT FK_PA_UTENTE
+        FOREIGN KEY (USERNAME)
+            REFERENCES UTENTE(USERNAME)
 );
 
+CREATE TABLE CARRELLO (
+    CODICE        CHAR(4) PRIMARY KEY,
+    NOME          VARCHAR(16) NOT NULL,
+    DESCRIZIONE   VARCHAR(256),
+    QUANTITA      INT NOT NULL,
+    COSTO         DECIMAL(6,2) NOT NULL,
+    CATEGORIA     VARCHAR(32),
+    USERNAME      VARCHAR(64) NOT NULL,
 
-CREATE TABLE Carrello (
-    codice        CHAR(4) PRIMARY KEY,
-    nome          VARCHAR(16) NOT NULL,
-    descrizione   VARCHAR(256),
-    quantita      INT NOT NULL,
-    costo         DECIMAL(6,2) NOT NULL,
-    categoria     VARCHAR(32),
-    username      VARCHAR(64) NOT NULL,
-
-    CONSTRAINT fk_carrello_utente
-        FOREIGN KEY (username)
-            REFERENCES Utente(username)
+    CONSTRAINT FK_CARRELLO_UTENTE
+        FOREIGN KEY (USERNAME)
+            REFERENCES UTENTE(USERNAME)
 );
 
+CREATE TABLE PRODOTTOACQUISTATO (
+    CODICE        CHAR(4) PRIMARY KEY,
+    NOME          VARCHAR(16) NOT NULL,
+    DESCRIZIONE   VARCHAR(256),
+    QUANTITA      INT NOT NULL,
+    COSTO         DECIMAL(6,2) NOT NULL,
+    CATEGORIA     VARCHAR(32),
+    USERNAME      VARCHAR(64) NOT NULL,
 
-CREATE TABLE ProdottoAcquistato (
-    codice        CHAR(4) PRIMARY KEY,
-    nome          VARCHAR(16) NOT NULL,
-    descrizione   VARCHAR(256),
-    quantita      INT NOT NULL,
-    costo         DECIMAL(6,2) NOT NULL,
-    categoria     VARCHAR(32),
-    username      VARCHAR(64) NOT NULL,
-
-    CONSTRAINT fk_pacq_utente
-        FOREIGN KEY (username)
-            REFERENCES Utente(username)
+    CONSTRAINT FK_PACQ_UTENTE
+        FOREIGN KEY (USERNAME)
+            REFERENCES UTENTE(USERNAME)
 );

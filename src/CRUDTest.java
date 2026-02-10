@@ -4,13 +4,12 @@ import java.time.LocalDate;
 public class CRUDTest {
 
     public static void main(String[] args) {
-
         // try-with-resources → chiude AUTOMATICAMENTE la connessione
-        try (Connection conn = DriverManager.getConnection("jdbc:derby:BriPoBeShop;create=true")) {
+        try (Connection conn = DBConnection.getConnection()) {
 
 //            stampaResultSet(conn);
 
-            Utente utente = new Utente("GeGe", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
+            Utente utente = new Utente("MiMi", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
             inserisciUtente(conn, utente);
             stampaResultSet(conn);
 
@@ -24,6 +23,7 @@ public class CRUDTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 
     // =========================
