@@ -1,13 +1,19 @@
 ----------------------------------------------------------------
-Thu Feb 05 19:26:29 CET 2026:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-019c-2f0e-4014-00000f5e9f18 
-on database directory /Users/gerardocolasurdo/Desktop/UNIVERSITA'/terzo anno/DA_SUPERARE/PROG3/Progetto_Prog3/Programmazione3/BriPoBeShop with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
+Wed Feb 11 17:47:06 CET 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-019c-4d99-6bfc-00000f3ea718 
+on database directory /Users/gerardocolasurdo/apache-tomcat-10.1.52/webapps/Programmazione3/BriPoBeShop with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
 Loaded from file:/Users/gerardocolasurdo/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=25.0.2+10-69
-user.dir=/Users/gerardocolasurdo/Desktop/UNIVERSITA'/terzo anno/DA_SUPERARE/PROG3/Progetto_Prog3/Programmazione3
+user.dir=/Users/gerardocolasurdo/apache-tomcat-10.1.52/webapps/Programmazione3
 os.name=Mac OS X
 os.arch=aarch64
 os.version=26.1
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Feb 11 17:47:16 CET 2026: Shutting down Derby engine
+----------------------------------------------------------------
+Wed Feb 11 17:47:16 CET 2026:
+Shutting down instance a816c00e-019c-4d99-6bfc-00000f3ea718 on database directory /Users/gerardocolasurdo/apache-tomcat-10.1.52/webapps/Programmazione3/BriPoBeShop with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
+----------------------------------------------------------------

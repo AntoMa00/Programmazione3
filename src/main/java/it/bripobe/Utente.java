@@ -1,8 +1,11 @@
+package it.bripobe;
+
 import java.time.LocalDate;
 
-public class Amministratore {
-    public Amministratore (String username, String password, String nome, String cognome, LocalDate dataNascita,
-                           char sesso, char nTel, String email){
+public class Utente {
+
+    public Utente (String username, String password, String nome, String cognome, LocalDate dataNascita,
+                    char sesso, String nTel, String email){
         this.username = username;
         this.password = password;
         this.nome = nome;
@@ -19,7 +22,7 @@ public class Amministratore {
     private String cognome;
     private String email;
     private char sesso;
-    private char nTel;
+    private String nTel;
     private LocalDate dataNascita;
 
     public void setUsername(String username) {
@@ -46,7 +49,7 @@ public class Amministratore {
         this.sesso = sesso;
     }
 
-    public void setNTel(char nTel) {
+    public void setNTel(String nTel) {
         this.nTel = nTel;
     }
 
@@ -81,7 +84,7 @@ public class Amministratore {
         return sesso;
     }
 
-    public char getnTel() {
+    public String getNTel() {
         return nTel;
     }
 

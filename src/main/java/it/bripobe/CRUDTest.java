@@ -1,3 +1,5 @@
+package it.bripobe;
+
 import java.sql.*;
 import java.time.LocalDate;
 
@@ -9,7 +11,7 @@ public class CRUDTest {
 
 //            stampaResultSet(conn);
 
-            Utente utente = new Utente("MiMi", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
+            Utente utente = new Utente("EEEE", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
             inserisciUtente(conn, utente);
             stampaResultSet(conn);
 
@@ -23,7 +25,11 @@ public class CRUDTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        try {
+            DriverManager.getConnection("jdbc:derby:;shutdown=true");
+        } catch (SQLException e) {
+            // Derby lancia sempre un'eccezione normale allo shutdown
+        }
     }
 
     // =========================

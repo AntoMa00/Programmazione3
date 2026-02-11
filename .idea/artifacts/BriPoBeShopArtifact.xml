@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BriPoBeShopArtifact">
+    <output-path>$PROJECT_DIR$/out/artifacts/BriPoBeShopArtifact</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/webapp" />
+    </root>
+  </artifact>
+</component>

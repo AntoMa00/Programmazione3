@@ -1,3 +1,5 @@
+package it.bripobe;
+
 import java.math.BigDecimal;
 public class ProdottoAcquistabile {
 

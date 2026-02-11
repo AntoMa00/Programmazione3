@@ -1,0 +1,47 @@
+<!-- Schermata per il Login -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="static/login.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- Contenitore del Login -->
+<div class="container">
+
+  <!-- Messaggio h1 -->
+  <h1>Login</h1>
+
+  <!-- Invia i tuoi dati e verifica se il login è andato a buon fine -->
+  <form action="LoginServlet" method="post">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <div id="error-message" class="alert">
+      Username o password errati
+    </div>
+    <button type="submit" class="primary-btn">
+      Login
+    </button>
+  </form>
+
+  <div class="divider">oppure</div>
+
+  <!-- Vai alla schermata di registrazione -->
+<!--  <form action="RegisterServlet" method="post" class="login-form">-->
+<!--    <button type="submit" class="secondary-btn">-->
+<!--      Registrati-->
+<!--    </button>-->
+<!--  </form>-->
+</div>
+</body>
+</html>
