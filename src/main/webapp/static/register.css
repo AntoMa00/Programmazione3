@@ -14,7 +14,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
     /* imposta lo sfondo dello schermo */
-    background-image: url("/webapp/static/icone/sfondo_appuntamento.png");
+    background-image: url("/src/main/webapp/static/icone/sfondo_appuntamento.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
