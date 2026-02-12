@@ -1,3 +1,5 @@
+package it.bripobe;
+
 import java.sql.*;
 
 public class PersonaFactory {

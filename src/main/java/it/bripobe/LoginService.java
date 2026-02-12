@@ -1,3 +1,5 @@
+package it.bripobe;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.sql.Connection;
@@ -10,7 +12,7 @@ public class LoginService {
         try (Connection conn = DBConnection.getConnection();
              BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.print("Inserisci username: ");
+            System.out.print("Inserisci il tuo username: ");
             String username = buffer.readLine();
 
             System.out.print("Inserisci password: ");

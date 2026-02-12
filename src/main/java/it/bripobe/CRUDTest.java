@@ -11,15 +11,15 @@ public class CRUDTest {
 
 //            stampaResultSet(conn);
 
-            Utente utente = new Utente("EEEE", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
-            inserisciUtente(conn, utente);
+            UtenteRegister utenteRegister = new UtenteRegister("EEEE", "po123", "Gerardo", "Colasurdo", LocalDate.of(2004, 7, 13), 'M', "3331598176", "geemail");
+            inserisciUtente(conn, utenteRegister);
             stampaResultSet(conn);
 
-//            Utente.setTitolo("Led Zeppelin III");
-//            aggiornaUtente(conn, Utente);
+//            it.bripobe.Utente.setTitolo("Led Zeppelin III");
+//            aggiornaUtente(conn, it.bripobe.Utente);
 //            stampaResultSet(conn);
 //
-//            eliminaUtente(conn, Utente);
+//            eliminaUtente(conn, it.bripobe.Utente);
 //            stampaResultSet(conn);
 
         } catch (SQLException e) {
@@ -35,7 +35,7 @@ public class CRUDTest {
     // =========================
     // INSERT
     // =========================
-    public static int inserisciUtente(Connection conn, Utente utente) throws SQLException {
+    public static int inserisciUtente(Connection conn, UtenteRegister utenteRegister) throws SQLException {
 
         String sql =
                 "INSERT INTO UTENTE (USERNAME, PASSWORD, NOME, COGNOME, DATANASCITA, SESSO, NTEL, EMAIL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -43,14 +43,14 @@ public class CRUDTest {
         // PreparedStatement legato alla CONNESSIONE
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, utente.getUsername());
-            ps.setString(2, utente.getPassword());
-            ps.setString(3, utente.getNome());
-            ps.setString(4, utente.getCognome());
-            ps.setDate(5, Date.valueOf(utente.getDataNascita()));
-            ps.setString(6, String.valueOf(utente.getSesso()));
-            ps.setString(7, utente.getNTel());
-            ps.setString(8, utente.getEmail());
+            ps.setString(1, utenteRegister.getUsername());
+            ps.setString(2, utenteRegister.getPassword());
+            ps.setString(3, utenteRegister.getNome());
+            ps.setString(4, utenteRegister.getCognome());
+            ps.setDate(5, Date.valueOf(utenteRegister.getDataNascita()));
+            ps.setString(6, String.valueOf(utenteRegister.getSesso()));
+            ps.setString(7, utenteRegister.getNTel());
+            ps.setString(8, utenteRegister.getEmail());
 
             return ps.executeUpdate(); // 🔥 QUI avviene l'inserimento
         }
@@ -59,17 +59,17 @@ public class CRUDTest {
     // =========================
     // UPDATE
     // =========================
-    /* public static int aggiornaUtente(Connection conn, Utente Utente) throws SQLException {
+    /* public static int aggiornaUtente(Connection conn, it.bripobe.Utente it.bripobe.Utente) throws SQLException {
 
         String sql =
-                "UPDATE Utente SET Titolo = ?, Artista = ?, Anno = ? WHERE UtenteId = ?";
+                "UPDATE it.bripobe.Utente SET Titolo = ?, Artista = ?, Anno = ? WHERE UtenteId = ?";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, Utente.getTitolo());
-            ps.setString(2, Utente.getArtista());
-            ps.setInt(3, Utente.getAnno());
-            ps.setInt(4, Utente.getUtenteId());
+            ps.setString(1, it.bripobe.Utente.getTitolo());
+            ps.setString(2, it.bripobe.Utente.getArtista());
+            ps.setInt(3, it.bripobe.Utente.getAnno());
+            ps.setInt(4, it.bripobe.Utente.getUtenteId());
 
             return ps.executeUpdate(); // 🔥 UPDATE reale
         }
@@ -78,13 +78,13 @@ public class CRUDTest {
     // =========================
     // DELETE
     // =========================
-    /* public static int eliminaUtente(Connection conn, Utente Utente) throws SQLException {
+    /* public static int eliminaUtente(Connection conn, it.bripobe.Utente it.bripobe.Utente) throws SQLException {
 
-        String sql = "DELETE FROM Utente WHERE UtenteId = ?";
+        String sql = "DELETE FROM it.bripobe.Utente WHERE UtenteId = ?";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setInt(1, Utente.getUtenteId());
+            ps.setInt(1, it.bripobe.Utente.getUtenteId());
 
             return ps.executeUpdate(); // 🔥 DELETE reale
         }

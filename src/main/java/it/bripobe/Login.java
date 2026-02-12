@@ -1,3 +1,5 @@
+package it.bripobe;
+
 import java.sql.SQLException;
 import java.sql.DriverManager;
 
@@ -8,7 +10,7 @@ public class Login {
         Persona persona = LoginService.autentica();
 
         if (persona != null) {
-            // Polimorfismo: l’oggetto decide cosa aprire
+            // Polimorfismo: l’oggetto decide cosa deve aprire
             persona.apriDocumento();
         } else {
             System.out.println("Username o password errati."); // gestiscilo con il CSS
