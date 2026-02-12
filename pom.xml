@@ -8,8 +8,10 @@
     <groupId>it.briopobe</groupId>
     <artifactId>shop</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <dependencies>
+
         <!-- Derby -->
         <dependency>
             <groupId>org.apache.derby</groupId>
@@ -17,32 +19,14 @@
             <version>10.17.1.0</version>
         </dependency>
 
-        <!-- Servlet API -->
+        <!-- Servlet API per Tomcat 9 -->
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Tomcat Embedded -->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>10.1.14</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <version>10.1.14</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-websocket</artifactId>
-            <version>10.1.14</version>
-        </dependency>
     </dependencies>
 
 </project>

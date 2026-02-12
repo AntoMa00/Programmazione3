@@ -19,7 +19,7 @@
   <h1>Registrati</h1>
 
   <!-- Invia i tuoi dati e verifica se la registrazione è andata a buon fine -->
-  <form action="{{ url_for('register') }}" method="post" class="register-form" >
+  <form action="register" method="post" class="register-form" > <!-- UtenteRegister.java -->
 
     <label for="nome">Nome</label>
     <input type="text" id="nome" name="nome" required>
@@ -30,9 +30,9 @@
     <label for="datanascita">Data di nascita</label>
     <input type="date" id="datanascita" name="datanascita" required>
 
-    <div class="alert">
-      {{ errore_data }}
-    </div>
+<!--    <div class="alert">-->
+<!--      {{ errore_data }}-->
+<!--    </div>-->
     <br>
     <label>Sesso</label>
     <div class="radio-group">
@@ -59,9 +59,9 @@
     <label for="confermapassword">Conferma password</label>
     <input type="password" id="confermapassword" name="confermapassword" required>
 
-    <div class="alert">
-      {{ errore_pass }}
-    </div>
+<!--    <div class="alert">-->
+<!--      {{ errore_pass }}-->
+<!--    </div>-->
     <br>
     <button type="submit">
       Registrati
@@ -71,7 +71,7 @@
   <br>
 
   <!-- Vai alla schermata di login -->
-  <form action="{{ url_for('login') }}" method="get" class="login-form" >
+  <form action="login.html" method="get" class="login-form" >
     <button type="submit">
       Torna al login
     </button>

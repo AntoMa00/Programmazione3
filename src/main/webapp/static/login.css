@@ -46,7 +46,7 @@ body {
 /* contenitore h1 */
 .container h1 {
     margin-bottom: 1.5rem; /* 24px /16 */
-    font-size: 1.625rem; /* 26px /16 */
+    font-size: 3rem; /* 26px /16 */
     font-weight: 700;
 }
 
@@ -93,7 +93,7 @@ body {
     border: none;
     border-radius: 999px;
 
-    background-color: lightseagreen;
+    background-color: greenyellow;
     color: white;
 
     font-size: 1rem; /* 16px /16 */
