@@ -24,8 +24,10 @@ public class UtenteRegister extends HttpServlet{
         String password = request.getParameter("password");
         String confermapassword = request.getParameter("confermapassword");
 
+        System.out.println("AAA");
+
         // try-with-resources → chiude AUTOMATICAMENTE la connessione
-        try (Connection conn = DBConnection.getConnection()) {
+        try (Connection conn = DBConnection.getConnection(getServletContext())) {
 
 //            stampaResultSet(conn);
 

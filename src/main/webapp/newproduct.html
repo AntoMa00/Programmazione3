@@ -4,7 +4,46 @@
   <meta charset="UTF-8">
   <title>Nuovo prodotto</title>
 </head>
+
 <body>
-Schermata che faccia impostare al nostro amministratore il nuovo prodotto
+
+  <!-- Contenitore del nuovo prodotto -->
+  <div class="container">
+
+    <!-- Messaggio h1 -->
+    <h1>Nuovo Prodotto</h1>
+
+    <!-- Invia i tuoi dati e verifica se la registrazione è andata a buon fine -->
+    <form action="newproduct" method="post" class="newproduct-form" > <!-- .java -->
+
+      <label for="codice">Codice</label>
+      <input type="text" id="codice" name="codice" maxlength="4" pattern=".{4}" required>
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="descrizione">Descrizione</label>
+      <input type="text" id="descrizione" name="descrizione" required>
+
+      <br>
+      <label>Quantità</label>
+      <input type="number" id="quantita" name="quantita" min="0" step="1" required>
+
+      <label for="costo">Costo</label>
+      <input type="number" id="costo" name="costo" min="0" required>
+
+      <label for="categoria">Categoria</label>
+      <input type="text" id="categoria" name="categoria" required>
+
+      <label for="sconto">% di Sconto</label>
+      <input type="number" id="sconto" name="sconto" min="0" max="100" step="1" required>
+
+      <br>
+      <button type="submit">
+        Nuovo Prodotto
+      </button>
+    </form>
+  </div>
+
 </body>
 </html>
