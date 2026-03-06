@@ -1,9 +1,9 @@
-package it.bripobe;
+package it.bripobe.fileFinoraInutilizzati;
 
 import java.math.BigDecimal;
-public class ProdottoAcquistato {
+public class ProdottoAcquistabile {
 
-    public ProdottoAcquistato (String codice,String nome,String descrizione,int quantita,BigDecimal costo,String categoria){
+    public ProdottoAcquistabile (String codice,String nome,String descrizione,int quantita, BigDecimal costo,String categoria){
         this.codice=codice;
         this.nome=nome;
         this.descrizione=descrizione;

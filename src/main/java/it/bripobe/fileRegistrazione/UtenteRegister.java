@@ -1,5 +1,7 @@
-package it.bripobe;
+package it.bripobe.fileRegistrazione;
 //import jdk.vm.ci.meta.Local;
+
+import it.bripobe.DBConnection;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

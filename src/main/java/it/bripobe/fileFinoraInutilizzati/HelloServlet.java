@@ -1,4 +1,4 @@
-package it.bripobe;
+package it.bripobe.fileFinoraInutilizzati;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

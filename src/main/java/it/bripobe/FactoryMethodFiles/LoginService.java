@@ -36,33 +36,9 @@ public class LoginService extends HttpServlet{
                 System.out.println("Username o password errati."); // gestiscilo con il CSS
             }
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-
-
-
     }
-
-
-
-
-//    public static Persona autentica(ServletContext context) {
-//
-//        try (Connection conn = DBConnection.getConnection(context)) {
-//
-//
-//            // Chiama la factory per creare l'oggetto corretto
-//            return PersonaFactory.creaPersona(conn, username, password);
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } catch (Exception e) {
-//            System.out.println("Errore durante la lettura dei dati.");
-//        }
-//
-//        return null;
-//    }
 }

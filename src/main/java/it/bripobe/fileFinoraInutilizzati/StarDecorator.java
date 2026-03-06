@@ -1,4 +1,4 @@
-package it.bripobe;
+package it.bripobe.fileFinoraInutilizzati;
 
 public class StarDecorator implements Decorator {
     @Override

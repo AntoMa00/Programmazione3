@@ -22,6 +22,10 @@ public class PrezzoBaseProdotto extends HttpServlet implements Prodotto {
     private String codice;
     private double oldprezzo;
 
+    public PrezzoBaseProdotto() {
+        super();
+    }
+
     public PrezzoBaseProdotto(String codice, double oldprezzo) {
         this.codice = codice;
         this.oldprezzo = oldprezzo;
@@ -55,28 +59,9 @@ public class PrezzoBaseProdotto extends HttpServlet implements Prodotto {
 
     }
 
-    /*public static int selezionaSconto(Connection conn, String codice) throws SQLException {
-
-        String sql = "SELECT SCONTO FROM UTENTE WHERE CODICE=?";
-
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-
-            ps.setString(1, codice);
-
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getInt("SCONTO"); // catturi lo sconto
-                }
-            }
-        }
-
-        // caso limite: codice non trovato
-        return -1;
-    }*/
-
     public static double selezionaPrezzo(Connection conn, String codice) throws SQLException {
 
-        String sql = "SELECT PREZZO_BASE FROM UTENTE WHERE CODICE=?";
+        String sql = "SELECT PREZZO_BASE FROM PRODOTTOACQUISTABILE WHERE CODICE=?";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, codice);
@@ -94,7 +79,7 @@ public class PrezzoBaseProdotto extends HttpServlet implements Prodotto {
 
     public static void aggiornaPrezzoESconto(Connection conn, String codice, double nuovoPrezzo, int nuovoSconto) throws SQLException {
 
-        String sql = "UPDATE UTENTE SET PREZZO_SCONTATO=?, SCONTO=? WHERE CODICE=?";
+        String sql = "UPDATE PRODOTTOACQUISTABILE SET PREZZO_SCONTATO=?, SCONTO=? WHERE CODICE=?";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setDouble(1, nuovoPrezzo);
